@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World.cs" type="Script" id=1]
+[ext_resource path="res://OtherScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Events/on_mouse_click.tres" type="Resource" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+_onMouseClick = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 364.758
+margin_top = 79.972
+margin_right = 596.758
+margin_bottom = 154.972
+text = "Click"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OtherScene" parent="." instance=ExtResource( 2 )]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

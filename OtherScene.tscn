@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://OtherScene.cs" type="Script" id=1]
+[ext_resource path="res://Events/on_mouse_click.tres" type="Resource" id=2]
+
+[node name="OtherScene" type="Node2D"]
+position = Vector2( 308.005, 419.79 )
+script = ExtResource( 1 )
+_onMouseClick = ExtResource( 2 )
